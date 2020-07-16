@@ -34,28 +34,31 @@
 		<!--------------------------------------------------- Part 2---------------------------------------------------------->
 		<script>
 			function generatePassword() {
+				//we want to prompt a user for input
+
 				var ask = prompt(
 					"Please choose a length of at least 8 characters and no more than 128 characters"
 				);
 				var confirmLetters = confirm("Would you like letters?");
 				var confirmNumbers = confirm("Would you like numbers?");
-				if (person != null) {
-					document.getElementById("demo").innerHTML =
-						"Hello " + person + "! How are you today?";
+				var password = "this is a test";
+
+				//we want to _ that input to generate a password
+				console.log(`letters: ${confirmLetters}`);
+				console.log(`numbers: ${confirmNumbers}`);
+				if (confirmLetters === true) {
+					//we know the user wants letters
 				}
-				function generatePassword() {
-					if (confirmLetters) {
-						// add letters
-					}
-					if (confirmNumbers) {
-						// add numbers
-					}
-					return; // generated password
+
+				if (confirmNumbers === true) {
+					//we know the user wants letters
+					password = confirmNumbers + confirmLetters;
 				}
+				//we want to return that password
 
 				////
 				///
-				return "this is a test";
+				return password;
 			}
 
 			// Assignment Code
