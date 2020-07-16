@@ -3,19 +3,37 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Password Generator</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!--------------------------------------------------- Part 1---------------------------------------------------------->
-		<script>
-			function password() {
+		<div class="wrapper">
+			<header>
+				<h1>Password Generator</h1>
+			</header>
+			<div class="card">
+				<div class="card-header">
+					<h2>Generate a Password</h2>
+				</div>
+				<div class="card-body">
+					<textarea
+						readonly
+						id="password"
+						placeholder="Your Secure Password"
+						aria-label="Generated Password"
+					></textarea>
+				</div>
+				<div class="card-footer">
+					<button id="generate" class="btn">Generate Password</button>
+				</div>
+			</div>
+		</div>
+
+		<!--------------------------------------------------- Part 2---------------------------------------------------------->
+
+		<script src="script.js">
+			function generatePassword() {
 				var ask = prompt(
 					"Please choose a length of at least 8 characters and no more than 128 characters"
 				);
@@ -23,24 +41,25 @@
 					document.getElementById("demo").innerHTML =
 						"Hello " + person + "! How are you today?";
 				}
+				////
+
+				///
+				return "this is a test";
 			}
+			// Assignment Code
+			var generateBtn = document.querySelector("#generate");
+
+			// Write password to the #password input
+			function writePassword() {
+				var password = generatePassword();
+				console.log(password);
+				var passwordText = document.querySelector("#password");
+
+				passwordText.value = password;
+			}
+
+			// Add event listener to generate button
+			generateBtn.addEventListener("click", writePassword);
 		</script>
-		<!--------------------------------------------------- Part 2---------------------------------------------------------->
-		<header>PASSWORD GENERATOR</header>
-		<div class="container">
-			<div class="card border-0 shadow my-5">
-				<div class="card-body p-5">
-					<h1>Generate a password</h1>
-					<hr />
-					<p class="lead">
-						Secure your Password
-					</p>
-					<hr />
-					<button type="button" class="btn btn-lg btn-danger">
-						Generate Password
-					</button>
-				</div>
-			</div>
-		</div>
 	</body>
 </html>
