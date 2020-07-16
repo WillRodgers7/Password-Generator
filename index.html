@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Password Generator</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="./script.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -31,33 +32,41 @@
 		</div>
 
 		<!--------------------------------------------------- Part 2---------------------------------------------------------->
-
-		<script src="script.js">
+		<script>
 			function generatePassword() {
 				var ask = prompt(
 					"Please choose a length of at least 8 characters and no more than 128 characters"
 				);
+				var confirmLetters = confirm("Would you like letters?");
+				var confirmNumbers = confirm("Would you like numbers?");
 				if (person != null) {
 					document.getElementById("demo").innerHTML =
 						"Hello " + person + "! How are you today?";
 				}
-				////
+				function generatePassword() {
+					if (confirmLetters) {
+						// add letters
+					}
+					if (confirmNumbers) {
+						// add numbers
+					}
+					return; // generated password
+				}
 
+				////
 				///
 				return "this is a test";
 			}
+
 			// Assignment Code
 			var generateBtn = document.querySelector("#generate");
-
 			// Write password to the #password input
 			function writePassword() {
 				var password = generatePassword();
 				console.log(password);
 				var passwordText = document.querySelector("#password");
-
 				passwordText.value = password;
 			}
-
 			// Add event listener to generate button
 			generateBtn.addEventListener("click", writePassword);
 		</script>
