@@ -41,19 +41,21 @@
 				);
 				var confirmLetters = confirm("Would you like letters?");
 				var confirmNumbers = confirm("Would you like numbers?");
-				var password = "this is a test";
+				var password = "";
 
 				//we want to _ that input to generate a password
 				console.log(`letters: ${confirmLetters}`);
 				console.log(`numbers: ${confirmNumbers}`);
-				if (confirmLetters === true) {
-					//we know the user wants letters
+				if (confirmLetters) {
+					// add letters to our password
+					password += "a";
 				}
-
-				if (confirmNumbers === true) {
-					//we know the user wants letters
-					password = confirmNumbers + confirmLetters;
+				if (confirmNumbers) {
+					// add numbers to our password
+					password += "1";
 				}
+				return password;
+				return password;
 				//we want to return that password
 
 				////
