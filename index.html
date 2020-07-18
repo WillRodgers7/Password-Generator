@@ -30,50 +30,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!--------------------------------------------------- Part 2---------------------------------------------------------->
-		<script>
-			function generatePassword() {
-				//we want to prompt a user for input
-
-				var ask = prompt(
-					"Please choose a length of at least 8 characters and no more than 128 characters"
-				);
-				var confirmLetters = confirm("Would you like letters?");
-				var confirmNumbers = confirm("Would you like numbers?");
-				var password = "";
-
-				//we want to _ that input to generate a password
-				console.log(`letters: ${confirmLetters}`);
-				console.log(`numbers: ${confirmNumbers}`);
-				if (confirmLetters) {
-					// add letters to our password
-					password += "a";
-				}
-				if (confirmNumbers) {
-					// add numbers to our password
-					password += "1";
-				}
-				return password;
-				return password;
-				//we want to return that password
-
-				////
-				///
-				return password;
-			}
-
-			// Assignment Code
-			var generateBtn = document.querySelector("#generate");
-			// Write password to the #password input
-			function writePassword() {
-				var password = generatePassword();
-				console.log(password);
-				var passwordText = document.querySelector("#password");
-				passwordText.value = password;
-			}
-			// Add event listener to generate button
-			generateBtn.addEventListener("click", writePassword);
-		</script>
+		<script src="./script.js"></script>
 	</body>
 </html>
